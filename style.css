@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: white;
+}
+body {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card ********************************* */
+.card {
+  display: grid;
+  grid-template:
+    "top" auto
+    "profile-pic" auto
+    "info" auto
+    "divider" auto
+    "icons" auto
+    "numbers" auto
+    "followers" auto/
+    600px;
+  background-color: #14203d;
+  width: 600px;
+  height: 700px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px grey;
+
+  margin: auto;
+  margin-top: 50px;
+}
+
+/* Top of the Card ********************************* */
+.card .top {
+  display: grid;
+  grid-template:
+    "back-arrow . heart three-dots" 40px/
+    40px 480px 40px 40px;
+  width: 600px;
+
+  color: white;
+  overflow: hidden;
+  border-radius: 5px;
+  /*  grid-area: card-top;
+  grid-template-columns: 40px 40px 40px; */
+}
+.card .top .back-arrow,
+.card .top .heart,
+.card .top .three-dots {
+  fill: #fff;
+  color: white;
+}
+
+.card .top .back-arrow {
+  grid-area: back-arrow;
+  width: 40px;
+  height: 40px;
+  color: white;
+}
+.card .top .three-dots {
+  grid-area: three-dots;
+  width: 40px;
+  height: 40px;
+}
+.card .top .heart {
+  grid-area: heart;
+  width: 40px;
+  height: 40px;
+}
+
+/* Profile Picture ********************************* */
+.card .profile-pic {
+  grid-area: profile-pic;
+  display: grid;
+  justify-content: center;
+  padding-bottom: 1ch;
+}
+.card .profile-pic img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 0px 0px;
+}
+
+/* Info about me ********************************* */
+.card .info {
+  grid-area: info;
+  justify-content: center;
+  text-align: center;
+}
+
+.card .info h1 {
+  padding-bottom: 1ch;
+  font-size: 2.2rem;
+}
+.card .info h2 {
+  padding-bottom: 1ch;
+  color: lightgray;
+  font-size: 1rem;
+}
+.card .info h3 {
+  color: lightgray;
+  padding-bottom: 1ch;
+}
+.card .info p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3ch;
+  background-color: #ef476f;
+  background: -webkit-linear-gradient(right, #5819be 0%, #43b45a 100%);
+  border-radius: 1em;
+  box-shadow: 0.1em 0.1em 0.2em 0.1em #00000050;
+  margin-top: 1ch;
+  width: 200px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  font-size: 3ch;
+}
+/* Divider ********************************* */
+.card .divider p {
+  grid-area: divider;
+  display: grid;
+  place-items: center;
+  color: gray;
+}
+
+/* Card Icons ********************************* */
+.card .icons img {
+  width: 80px; /*
+  place-items: center;*/
+}
+.card .icons {
+  grid-area: icons;
+  display: grid;
+  grid-template:
+    ". linked-in github twitter ." auto/
+    1fr 1fr 1fr 1fr 1fr;
+  /* grid-template-columns: repeat(3, auto);
+  /*margin: 10% 12%;*/
+  place-items: center;
+}
+.linked-in {
+  grid-area: linked-in;
+}
+.github {
+  grid-area: github;
+}
+.twitter {
+  grid-area: twitter;
+}
+.social-media-icons {
+  width: 80px;
+}
+
+/* Following Numbers ********************************* */
+.card .numbers {
+  grid-area: numbers;
+  display: grid;
+  /*grid-template-columns: repeat(3, auto);*/
+  grid-template:
+    ". num1 num2 num3 ." auto/
+    1fr 1fr 1fr 1fr 1fr;
+  /*margin: 10% 12%;*/
+  place-items: center;
+  width: 600px;
+}
+.card .numbers .num1 {
+  grid-area: num1;
+}
+.card .numbers .num2 {
+  grid-area: num2;
+}
+.card .numbers .num3 {
+  grid-area: num3;
+}
+
+.card .numbers p {
+  font-size: 1.7rem;
+}
+
+/* Following Following Following ********************************* */
+.card .followers {
+  grid-area: followers;
+  display: grid;
+  grid-template:
+    ". follow1 follow2 follow3 ." auto/
+    1fr 1fr 1fr 1fr 1fr;
+  place-items: center;
+  margin-bottom: 20px;
+}
+.card .followers .follow1 {
+  grid-area: follow1;
+}
+.card .followers .follow2 {
+  grid-area: follow2;
+}
+.card .followers .follow3 {
+  grid-area: follow3;
+}
+.card .followers p {
+  color: grey;
+  font-size: 1.2rem;
+}
+
+/* Effects *************************************************** */
+.social-media-icons:hover {
+  transform: scale(1.3);
+  
+}
